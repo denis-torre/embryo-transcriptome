@@ -1,1 +1,1 @@
-# embryo-transcriptome
+This repository contains the HTML and associated files underlying the publicly available data resource associated to this study. To access the resource, please visit https://denis-torre.github.io/embryo-transcriptome/. More information on the publication will be provided upon acceptance of the manuscript.
