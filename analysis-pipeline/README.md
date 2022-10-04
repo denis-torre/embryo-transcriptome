@@ -11,3 +11,10 @@ The code consists of five separate modules, each containing pipelines built for 
 - **[embryo-atacseq](embryo-atacseq)** contains code to process publicly available ATAC-Seq data ([Liu et al., Nature Communications 2019](https://www.nature.com/articles/s41467-018-08244-0)) to investigate chromatin accessibility at novel isoform and gene TSSs.
 - **[embryo-chipseq](embryo-chipseq)** contains code to process publicly available CU&RUN data ([Xia et al., Science 2019](https://www.science.org/doi/10.1126/science.aaw5118) to investigate H3K4me3 and H3K27ac marks at novel isoform and gene TSSs.
 - **[embryo-methylation](embryo-methylation)** contains code to process publicly available RRBS data ([Guo et al., Nature 2014](https://www.nature.com/articles/nature13544) to investigate H3K4me3 and H3K27ac marks at novel isoform and gene TSSs.
+
+## Pipeline structure 
+The code of each pipeline was written and executed in Python 3.7.3 and R 4.0.3 environments. For each module, the following files are available:
+
+- A **main pipeline file** (pipeline/pipeline-*.py), containing the pipeline logic. These are the main files used to coordinate input and output files. They are written in Python using the ruffus workflow management software.
+- A **supporting R script file** (pipeline/scripts/\*.R), containing supporting R code for each pipeline step. For some analytical steps, these contain the bulk of the code.
+- A **supporting Python script file** (pipeline/scripts/\*.py), containing supporting Python code for each pipeline step. These are often sparingly used.
