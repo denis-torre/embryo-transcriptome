@@ -69,10 +69,10 @@
       <!-- GTF -->
       <div class="row my-4">
         <h4 class="mb-3">Reference transcriptome files</h3>
-        <div class="col-5">
+        <div class="col-lg-5">
             <img src="web-resource/img/isoforms.png" alt="" style="width: 100%">
         </div>
-        <div class="col-7">
+        <div class="col-lg-7">
           <p>
             The reference transcriptome files contains information on the <b>genomic location and sequences of the isoforms</b> described in the study.
             These files may be used for gene expression quantification and visualization on the genome browser.
@@ -81,22 +81,20 @@
               <li><a href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.fasta">FASTA</a> - nucleotide sequences of all known plus novel isoforms</li>
             </ul>
           </p>
-          <p>
-            Please note that the files below contain <b>all known isoforms</b> (from the <a href="http://ftp.ensembl.org/pub/release-102/gtf/homo_sapiens/" target="_blank">Ensembl GRCh38.102.gtf</a> release), plus all novel isoforms described in our study (see Methods for details).
-          </p>
-          <p>
-            For full information on the short-read RNA-Seq splice junction support of each isoform, see <a href="#">here</a>.
-          </p>
         </div>
+        <p>
+          Please note that the files above contain <b>all known isoforms</b> (from the <a href="http://ftp.ensembl.org/pub/release-102/gtf/homo_sapiens/" target="_blank">Ensembl GRCh38.102.gtf</a> release), plus all novel isoforms described in our study (see Methods for details).
+          For full information on the short-read RNA-Seq splice junction support of each isoform, see <a href="#">here</a>.
+        </p>
       </div>
       
-      <!-- SQANTI -->
+      <!-- Isoform classes -->
       <div class="row my-4">
-        <h4 class="mb-3">Isoform structural classification (TALON/SQANTI3)</h3>
-        <div class="col-5">
+        <h4 class="mb-3">Isoform structural classification</h3>
+        <div class="col-lg-5">
           <img src="web-resource/img/isoform-classes.png" alt="" style="width: 100%">
         </div>
-        <div class="col-7">
+        <div class="col-lg-7">
           <p>The isoform structural classification file contain information on the assigned structural category of each isoform, based on comparisons to known isoforms (Ensembl GRCh38 v102 human transcriptome release) using <a href="https://www.biorxiv.org/content/10.1101/672931v2" target="_blank">TALON</a> (v5.0) and <a href="https://github.com/ConesaLab/SQANTI3" target="_blank">SQANTI3</a> (v4.2).</p>
           <ul>
             <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/structural-classification/Homo_sapiens.GRCh38.102_talon-SJ_filtered-transcript_classification_subset.tsv">here</a></li>
@@ -107,6 +105,40 @@
       </div>
       
       <!-- CPAT -->
+      <div class="row my-4">
+        <h4 class="mb-3">Isoform biological properties</h3>
+        <p> The section below contains links to files with predictes isoform-level biological properties. </p>
+        <div class="col-xl-3 col-md-6">
+          <div class="text-center border rounded px-2 mx-1 height-100">
+            <img src="web-resource/img/mrna-translation.png" alt="" style="height: 200px;">
+            <p><b>Protein-coding potential</b></p>
+            <a href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-coding-potential/Homo_sapiens.GRCh38.102_talon-SJ_filtered-cpat.ORF_prob.best_subset.tsv">Results file</a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="text-center border rounded px-2 mx-1 height-100">
+            <img src="web-resource/img/protein-domain.png" alt="" style="height: 200px;">
+            <p><b>Protein domain content</b></p>
+            <a href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-domain-prediction/human-translated_pfam_subset.tsv">Results file</a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="text-center border rounded px-2 mx-1 height-100">
+            <img src="web-resource/img/repetitive-dna.png" alt="" style="height: 200px;">
+            <p><b>Repeat element content</b></p>
+            <a href="https://human-embryo-transcriptome.s3.amazonaws.com/repeat-content-prediction/Homo_sapiens.GRCh38.102_talon_repeatmasker_subset.tsv">Results file</a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="text-center border rounded px-2 mx-1 height-100">
+            <img src="web-resource/img/phylogenetic-tree.png" alt="" style="height: 200px;">
+            <p><b>Evolutionary conservation</b></p>
+            <a href="https://human-embryo-transcriptome.s3.amazonaws.com/evolutionary-conservation/hg38.phastCons100way-exon-average_scores_subset.tsv">Results file</a>
+          </div>
+        </div>
+      </div>
+
+<!--       
       <div class="row my-4">
         <h4 class="mb-3">Protein coding potential predictions (CPAT)</h3>
         <div class="col-5">
@@ -122,7 +154,6 @@
         </div>
       </div>
 
-      <!-- Pfam -->
       <div class="row my-4">
         <h4 class="mb-3">Protein domain content predictions (PfamScan)</h3>
         <div class="col-5">
@@ -138,7 +169,6 @@
         </div>
       </div>
 
-      <!-- Repeats -->
       <div class="row my-4">
         <h4 class="mb-3">Repeat content predictions (RepeatMasker)</h3>
         <div class="col-5">
@@ -154,7 +184,6 @@
         </div>
       </div>
 
-      <!-- Conservation -->
       <div class="row my-4">
         <h4 class="mb-3">Evolutionary conservation</h3>
         <div class="col-5">
@@ -168,7 +197,7 @@
             <li>Columns: <a href="#">view</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <!-- Counts -->
       <div class="row my-4">
