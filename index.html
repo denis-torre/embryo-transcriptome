@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <title>Isoform-resolved transcriptome of the human preimplantation embryo</title>
-
+  <!-- <link rel="icon" type="image/x-icon" href="web-resource/favicon.ico"> -->
   <link href="web-resource/bootstrap-5.2.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="web-resource/style.css" rel="stylesheet">
 </head>
@@ -60,67 +60,46 @@
 
       
       <!-- Data files -->
+      <!-- <h3 class="border-bottom pb-3 my-4">Genome browser</h3> -->
+      
+      
+      <!-- Data files -->
       <h3 class="border-bottom pb-3 my-4">Data files</h3>
       
       <!-- GTF -->
       <div class="row my-4">
-        <h4 class="">Reference transcriptome files (GTF, FASTA)</h3>
+        <h4 class="mb-3">Reference transcriptome files</h3>
         <div class="col-5">
             <img src="web-resource/img/isoforms.png" alt="" style="width: 100%">
-            <table>
-              <table class="table table-striped text-center">
-                <thead>
-                  <tr>
-                    <th scope="col">File type</th>
-                    <th scope="col">Version A</th>
-                    <th scope="col">Version B</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">GTF</th>
-                    <td><a href="#">link</a></td>
-                    <td><a href="#">link</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">GFF3</th>
-                    <td><a href="#">link</a></td>
-                    <td><a href="#">link</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">FASTA</th>
-                    <td><a href="#">link</a></td>
-                    <td><a href="#">link</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </table>
         </div>
         <div class="col-7">
           <p>
-            The reference transcriptome files contains information on the <b>genomic locations of isoforms</b> described in the study.
+            The reference transcriptome files contains information on the <b>genomic location and sequences of the isoforms</b> described in the study.
             These files may be used for gene expression quantification and visualization on the genome browser.
+            <ul>
+              <li><a href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.gtf">GTF</a> - genomic coordinates of all known plus novel isoforms for the Ensembl GRCh38 build</li>
+              <li><a href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.fasta">FASTA</a> - nucleotide sequences of all known plus novel isoforms</li>
+            </ul>
           </p>
           <p>
-            Note that two versions of each file are available:
-            <ul>
-              <li><b>Version A</b> - contains all known isoforms in the Ensembl GRCh38 v102 human transcriptome release (independently of expression in human embryos), plus all novel isoforms supported by both long- and short-read RNA-Seq in our human embryo data. This version is recommended for general purpose gene expression quantification using other RNA-Seq data.</li>
-              <li class="mt-2"><b>Version B</b> - a subset of the above, where known isoforms that lack full splice junction coverage in our short-read RNA-Seq dataset have been removed (see <a href="#">Methods</a> for details). This version is recommended when comparing properties of isoforms expressed in early human embryos, as isoforms that are not expressed during these stages are removed.</li>
-            </ul>
+            Please note that the files below contain <b>all known isoforms</b> (from the <a href="http://ftp.ensembl.org/pub/release-102/gtf/homo_sapiens/" target="_blank">Ensembl GRCh38.102.gtf</a> release), plus all novel isoforms described in our study (see Methods for details).
+          </p>
+          <p>
+            For full information on the short-read RNA-Seq splice junction support of each isoform, see <a href="#">here</a>.
           </p>
         </div>
       </div>
       
       <!-- SQANTI -->
       <div class="row my-4">
-        <h4 class="">Isoform structural classification (TALON/SQANTI3)</h3>
+        <h4 class="mb-3">Isoform structural classification (TALON/SQANTI3)</h3>
         <div class="col-5">
           <img src="web-resource/img/isoform-classes.png" alt="" style="width: 100%">
         </div>
         <div class="col-7">
           <p>The isoform structural classification file contain information on the assigned structural category of each isoform, based on comparisons to known isoforms (Ensembl GRCh38 v102 human transcriptome release) using <a href="https://www.biorxiv.org/content/10.1101/672931v2" target="_blank">TALON</a> (v5.0) and <a href="https://github.com/ConesaLab/SQANTI3" target="_blank">SQANTI3</a> (v4.2).</p>
           <ul>
-            <li>Link to file: <a href="#", target="_blank">to be added</a></li>
+            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/structural-classification/Homo_sapiens.GRCh38.102_talon-SJ_filtered-transcript_classification_subset.tsv">here</a></li>
             <li>Format: TSV</li>
             <li>Columns: <a href="#">view</a></li>
           </ul>
@@ -129,14 +108,14 @@
       
       <!-- CPAT -->
       <div class="row my-4">
-        <h4 class="">Protein coding potential predictions (CPAT)</h3>
+        <h4 class="mb-3">Protein coding potential predictions (CPAT)</h3>
         <div class="col-5">
           <img src="web-resource/img/mrna-translation.png" alt="" style="width: 100%">
         </div>
         <div class="col-7">
           <p>The protein coding potential prediction file contains information on the predicted coding potential of each isoform generated using <a href="https://cpat.readthedocs.io/en/latest/" target="_blank">CPAT</a> (v3.0.2).</p>
           <ul>
-            <li>Link to file: <a href="#", target="_blank">to be added</a></li>
+            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-coding-potential/Homo_sapiens.GRCh38.102_talon-SJ_filtered-cpat.ORF_prob.best_subset.tsv">to be added</a></li>
             <li>Format: TSV</li>
             <li>Columns: <a href="#">view</a></li>
           </ul>
@@ -145,14 +124,14 @@
 
       <!-- Pfam -->
       <div class="row my-4">
-        <h4 class="">Protein domain content predictions (PfamScan)</h3>
+        <h4 class="mb-3">Protein domain content predictions (PfamScan)</h3>
         <div class="col-5">
           <img src="web-resource/img/protein-domain.png" alt="" style="width: 100%">
         </div>  
         <div class="col-7">
           <p>The protein domain content prediction file contains information on the predicted protein domains within each isoform's open reading frame (ORF), as predicted by <a href="https://www.ebi.ac.uk/Tools/pfa/pfamscan/" target="_blank">PfamScan</a> (v1.6) and <a href="http://hmmer.org/" target="_blank">HMMer</a> (v3.3).</p>
           <ul>
-            <li>Link to file: <a href="#", target="_blank">to be added</a></li>
+            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-domain-prediction/human-translated_pfam_subset.tsv">to be added</a></li>
             <li>Format: TSV</li>
             <li>Columns: <a href="#">view</a></li>
           </ul>
@@ -161,14 +140,14 @@
 
       <!-- Repeats -->
       <div class="row my-4">
-        <h4 class="">Repeat content predictions (RepeatMasker)</h3>
+        <h4 class="mb-3">Repeat content predictions (RepeatMasker)</h3>
         <div class="col-5">
           <img src="web-resource/img/repetitive-dna.png" alt="" style="width: 100%">
         </div> 
         <div class="col-7">
           <p>The repeat content prediction file contains information on the predicted location of repetitive elements within each isoform's nucleotide sequence, as predicted by <a href="https://www.repeatmasker.org/" target="_blank">RepeatMasker</a> (v4.1.1).</p>
           <ul>
-            <li>Link to file: <a href="#", target="_blank">to be added</a></li>
+            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/repeat-content-prediction/Homo_sapiens.GRCh38.102_talon_repeatmasker_subset.tsv">to be added</a></li>
             <li>Format: TSV</li>
             <li>Columns: <a href="#">view</a></li>
           </ul>
@@ -177,14 +156,14 @@
 
       <!-- Conservation -->
       <div class="row my-4">
-        <h4 class="">Evolutionary conservation</h3>
+        <h4 class="mb-3">Evolutionary conservation</h3>
         <div class="col-5">
           <img src="web-resource/img/phylogenetic-tree.png" alt="" style="width: 100%">
         </div> 
         <div class="col-7">
           <p>The evolutionary conservation file contains information on the average base-wise conservation scores of each isoform, as estimated by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2798823/" target="_blank">PhyloP</a> (<a href="https://hgdownload.cse.ucsc.edu/goldenpath/hg38/phyloP100way/" target="_blank">hg38.phyloP100way</a>).
           <ul>
-            <li>Link to file: <a href="#", target="_blank">to be added</a></li>
+            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/evolutionary-conservation/hg38.phastCons100way-exon-average_scores_subset.tsv">to be added</a></li>
             <li>Format: TSV</li>
             <li>Columns: <a href="#">view</a></li>
           </ul>
@@ -193,22 +172,22 @@
 
       <!-- Counts -->
       <div class="row my-4">
-        <h4 class="">Counts</h3>
+        <h4 class="mb-3">Counts</h3>
           <div class="col-5">
             <img src="web-resource/img/gene-heatmap.png" alt="" style="width: 100%">
           </div>   
         <div class="col-7">
           <p>The counts files contain estimated counts for each isoform across the short-read RNA-Seq samples in our dataset, as estimated using STAR (v2.7.5b) and RSEM (v1.3.3). Both gene-level and isoform-level estimates are available.</p>
           <ul>
-            <li>Link to file: <a href="#", target="_blank">gene counts</a>, and <a href="#", target="_blank">isoform counts</a></li>
+            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/expression-counts/human_embryo-gene_counts_subset.tsv">gene counts</a>, and <a href="https://human-embryo-transcriptome.s3.amazonaws.com/expression-counts/human-transcript_tpm_subset.txt">isoform counts</a></li>
             <li>Format: TSV</li>
           </ul>
         </div>
       </div>
 
       <!-- Differential expression -->
-      <div class="row my-4">
-        <h4 class="">Differential expression</h3>
+      <!-- <div class="row my-4">
+        <h4 class="mb-3">Differential expression</h3>
           <div class="col-5">
             <img src="web-resource/img/volcano-plot.png" alt="" style="width: 100%">
           </div>
@@ -220,11 +199,11 @@
             <li>Columns: <a href="#">view</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <!-- Pipeline -->
       <!-- <div class="row my-4">
-        <h4 class="">Source code</h3>
+        <h4 class="mb-3">Source code</h3>
           <div class="col-5">
             <img src="web-resource/img/analysis-pipeline.png" alt="" style="width: 100%">
           </div>
@@ -238,11 +217,11 @@
       <!-- Acknowledgements -->
       <div class="row my-4">
         <h4 class="border-bottom pb-3 my-4">Acknowledgements</h3>
-        <div class="col-3">
-          <img src="web-resource/img/ismms.jpg" alt="" style="width: 100%">
+        <div class="col-4">
+          <img src="web-resource/img/ismms.jpg" alt="" style="height: 150px;">
         </div>
         <div class="col-3">
-          <img src="web-resource/img/tasmc.png" alt="" style="width: 100%">
+          <img src="web-resource/img/tasmc.png" alt="" style="height: 150px;">
         </div>
       </div>
 
@@ -254,6 +233,8 @@
 
 
   <script src="web-resource/bootstrap-5.2.1/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://livejs.com/live.js"></script>
+
 
 </body>
 
