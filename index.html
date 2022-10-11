@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <title>Isoform-resolved transcriptome of the human preimplantation embryo</title>
-  <!-- <link rel="icon" type="image/x-icon" href="web-resource/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="web-resource/favicon.ico">
   <link href="web-resource/bootstrap-5.2.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="web-resource/style.css" rel="stylesheet">
 </head>
@@ -109,30 +109,42 @@
         <h4 class="mb-3">Isoform biological properties</h3>
         <p> The section below contains links to files with predictes isoform-level biological properties. </p>
         <div class="col-xl-3 col-md-6">
-          <div class="text-center border rounded px-2 mx-1 height-100">
-            <img src="web-resource/img/mrna-translation.png" alt="" style="height: 200px;">
-            <p><b>Protein-coding potential</b></p>
+          <div class="border rounded px-2 mx-1 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/mrna-translation.png" alt="" style="height: 200px;">
+            </div>
+            <b>Protein-coding potential</b>
+            <p>Predicted protein-coding potential and ORFs of each isoform.</p>
             <a href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-coding-potential/Homo_sapiens.GRCh38.102_talon-SJ_filtered-cpat.ORF_prob.best_subset.tsv">Results file</a>
           </div>
         </div>
         <div class="col-xl-3 col-md-6">
-          <div class="text-center border rounded px-2 mx-1 height-100">
-            <img src="web-resource/img/protein-domain.png" alt="" style="height: 200px;">
-            <p><b>Protein domain content</b></p>
+          <div class="border rounded px-2 mx-1 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/protein-domain.png" alt="" style="height: 200px;">
+            </div>
+            <b>Protein domain content</b>
+            <p>Predicted protein domains for each predicted protein-coding isoform.</p>
             <a href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-domain-prediction/human-translated_pfam_subset.tsv">Results file</a>
           </div>
         </div>
         <div class="col-xl-3 col-md-6">
-          <div class="text-center border rounded px-2 mx-1 height-100">
-            <img src="web-resource/img/repetitive-dna.png" alt="" style="height: 200px;">
-            <p><b>Repeat element content</b></p>
+          <div class="border rounded px-2 mx-1 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/repetitive-dna.png" alt="" style="height: 200px;">
+            </div>
+            <b>Repeat element content</b>
+            <p>Predicted repetitive element content (e.g. ERVs) of each isoform.</p>
             <a href="https://human-embryo-transcriptome.s3.amazonaws.com/repeat-content-prediction/Homo_sapiens.GRCh38.102_talon_repeatmasker_subset.tsv">Results file</a>
           </div>
         </div>
         <div class="col-xl-3 col-md-6">
-          <div class="text-center border rounded px-2 mx-1 height-100">
-            <img src="web-resource/img/phylogenetic-tree.png" alt="" style="height: 200px;">
-            <p><b>Evolutionary conservation</b></p>
+          <div class="border rounded px-2 mx-1 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/phylogenetic-tree.png" alt="" style="height: 200px;">
+            </div>
+            <b>Evolutionary conservation</b>
+            <p>Predicted average evolutionary conservation scores for each isoform.</p>
             <a href="https://human-embryo-transcriptome.s3.amazonaws.com/evolutionary-conservation/hg38.phastCons100way-exon-average_scores_subset.tsv">Results file</a>
           </div>
         </div>
@@ -199,8 +211,7 @@
         </div>
       </div> -->
 
-      <!-- Counts -->
-      <div class="row my-4">
+      <!-- <div class="row my-4">
         <h4 class="mb-3">Counts</h3>
           <div class="col-5">
             <img src="web-resource/img/gene-heatmap.png" alt="" style="width: 100%">
@@ -212,7 +223,7 @@
             <li>Format: TSV</li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <!-- Differential expression -->
       <!-- <div class="row my-4">
@@ -251,6 +262,10 @@
         </div>
         <div class="col-3">
           <img src="web-resource/img/tasmc.png" alt="" style="height: 150px;">
+        </div>
+        <div class="col-3">
+          Some icons above generated using <a href="https://biorender.com/" target="_blank">BioRender</a>.<br>
+          <img src="web-resource/img/biorender-logo-blue.png" alt="" style="height: 150px;">
         </div>
       </div>
 
