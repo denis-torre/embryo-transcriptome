@@ -296,26 +296,25 @@
                   <br><br>
                   These values were predicted using <b>PfamScan</b> (v1.6) and <b>HMMer</b> (v3.3) leveraging the best ORFs predicted using CPAT, as described earlier.
                   <br><br>
-                  The file is in the TSV format.
-                  " data-bs-html="true">
-                  <!-- , and contains the following columns: -->
-                  <!-- <ul>
+                  The file is in the TSV format, and contains the following columns (see <a href='http://eddylab.org/software/hmmer/Userguide.pdf' target='_blank'>HMMer manual</a> for more details):
+                  <ul>
                     <li><b>seq_id:</b>Transcript ID</li>
-                    <li><b>alignment_start:</b></li>
-                    <li><b>alignment_end:</b></li>
-                    <li><b>envelope_start:</b></li>
-                    <li><b>envelope_end:</b></li>
-                    <li><b>hmm_acc:</b></li>
-                    <li><b>hmm_name:</b></li>
-                    <li><b>type:</b></li>
-                    <li><b>hmm_start:</b></li>
-                    <li><b>hmm_end:</b></li>
-                    <li><b>hmm_length:</b></li>
-                    <li><b>bit_score:</b></li>
-                    <li><b>E_value:</b></li>
-                    <li><b>significance:</b></li>
-                    <li><b>clan:</b></li>
-                  </ul> -->
+                    <li><b>alignment_start:</b> The position in the target sequence at which the hit starts</li>
+                    <li><b>alignment_end:</b> The position in the target sequence at which the hit ends</li>
+                    <li><b>envelope_start:</b> The position in the target sequence at which the surrounding envelope starts</li>
+                    <li><b>envelope_end:</b> The position in the target sequence at which the surrounding envelope ends</li>
+                    <li><b>hmm_acc:</b> The accession of the target HMM (e.g. protein domain)</li>
+                    <li><b>hmm_name:</b> The name of the target HMM</li>
+                    <li><b>type:</b> The type of the target HMM</li>
+                    <li><b>hmm_start:</b> The position in the HMM at which the hit starts</li>
+                    <li><b>hmm_end:</b>The position in the HMM at which the hit ends</li>
+                    <li><b>hmm_length:</b> The length of the hit in the HMM</li>
+                    <li><b>bit_score:</b> The score (in bits) for this hit</li>
+                    <li><b>E_value:</b> The expectation value (statistical significance) of the target</li>
+                    <li><b>clan:</b> The Pfam 'clan' (a group of two or more families that have arisen from a single evolutionary origin)</li>
+                  </ul>
+                  " data-bs-html="true">
+                  <!-- <li><b>significance:</b></li> -->
                     <i class="fa-regular fa-circle-question"></i> Help
                   </button>
                 </div>
@@ -344,8 +343,25 @@
                   <br><br>
                   These values were predicted using <b>RepeatMasker</b> (v4.11) using the isoform nucleotide sequences as an input.
                   <br><br>
-                  The file is in the TSV format.
+                  The file is in the TSV format, and contains the following columns (see <a href='https://www.repeatmasker.org/webrepeatmaskerhelp.html' target='_blank'>RepeatMasker manual</a> for more details):
+                  <ul>
+                    <li><b>sw_score:</b> Smith-Waterman score of the match, usually complexity adjusted</li>
+                    <li><b>pct_div:</b> % substitutions in matching region compared to the consensus</li>
+                    <li><b>pct_del:</b> % of bases opposite a gap in the query sequence (deleted bp)</li>
+                    <li><b>pct_ins:</b> % of bases opposite a gap in the repeat consensus (inserted bp)</li>
+                    <li><b>query_sequence:</b> Transcript ID</li>
+                    <li><b>query_begin:</b> starting position of match in the transcript</li>
+                    <li><b>query_end:</b> ending position of match in the transcript</li>
+                    <li><b>query_left:</b> no. of bases in the transcript past the ending position of match</li>
+                    <li><b>match:</b> match is with the Complement of the consensus sequence in the database</li>
+                    <li><b>matching_repeat:</b> name of the matching interspersed repeat</li>
+                    <li><b>repeat_class:</b> the class of the repeat</li>
+                    <li><b>repeat_begin:</b> no. of bases in (complement of) the repeat consensus sequence prior to beginning of the match (so 0 means that the match extended all the way to the end of the repeat consensus sequence)</li>
+                    <li><b>repeat_end:</b> starting position of match in database sequence (using top-strand numbering)</li>
+                    <li><b>repeat_left:</b> ending position of match in database sequence</li>
+                  </ul>
                   " data-bs-html="true">
+                  <!-- <li><b>ID:</b></li> -->
                     <i class="fa-regular fa-circle-question"></i> Help
                   </button>
                 </div>
@@ -374,7 +390,11 @@
                   <br><br>
                   These values were calculated using the <b><a href='https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/' target='_blank'>phastCons100way</a></b> score file, based on the multiple sequence alignment of the human genome to 99 vertebrates spanning primates, mammals, birds, reptiles and fish.
                   <br><br>
-                  The file is in the TSV format.
+                  The file is in the TSV format, and contains the following columns:
+                  <ul>
+                    <li><b>transcript_id:</b> Transcript ID</li>
+                    <li><b>mean_score:</b> Average conservation score across the isoform exons (PhastCons100way)</li>
+                  </ul>
                   " data-bs-html="true">
                     <i class="fa-regular fa-circle-question"></i> Help
                   </button>
