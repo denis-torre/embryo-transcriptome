@@ -191,47 +191,12 @@
         </div>
 
       </div>
-      <!-- <div class="row my-4">
-        <h4 class="mb-3">Reference transcriptome files</h3>
-        <div class="col-lg-5">
-            <img src="web-resource/img/isoforms.png" alt="" style="width: 100%">
-        </div>
-        <div class="col-lg-7">
-          <p>
-            The reference transcriptome files contains information on the <b>genomic location and sequences of the isoforms</b> described in the study.
-            These files may be used for gene expression quantification and visualization on the genome browser.
-            <ul>
-              <li><a href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.gtf">GTF</a> - genomic coordinates of all known plus novel isoforms for the Ensembl GRCh38 build</li>
-              <li><a href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.fasta">FASTA</a> - nucleotide sequences of all known plus novel isoforms</li>
-            </ul>
-          </p>
-        </div>
-        <p>
-          Please note that the files above contain <b>all known isoforms</b> (from the <a href="http://ftp.ensembl.org/pub/release-102/gtf/homo_sapiens/" target="_blank">Ensembl GRCh38.102.gtf</a> release), plus all novel isoforms described in our study (see Methods for details).
-          For full information on the short-read RNA-Seq splice junction support of each isoform, see <a href="#">here</a>.
-        </p>
-      </div> -->
       
-      <!-- Isoform classes -->
-      <!-- <div class="row my-4">
-        <h4 class="mb-3">Isoform structural classification</h3>
-        <div class="col-lg-5">
-          <img src="web-resource/img/isoform-classes.png" alt="" style="width: 100%">
-        </div>
-        <div class="col-lg-7">
-          <p>The isoform structural classification file contain information on the assigned structural category of each isoform, based on comparisons to known isoforms (Ensembl GRCh38 v102 human transcriptome release) using <a href="https://www.biorxiv.org/content/10.1101/672931v2" target="_blank">TALON</a> (v5.0) and <a href="https://github.com/ConesaLab/SQANTI3" target="_blank">SQANTI3</a> (v4.2).</p>
-          <ul>
-            <li>Link to file: <a href="https://human-embryo-transcriptome.s3.amazonaws.com/structural-classification/Homo_sapiens.GRCh38.102_talon-SJ_filtered-transcript_classification_subset.tsv">here</a></li>
-            <li>Format: TSV</li>
-            <li>Columns: <a href="#">view</a></li>
-          </ul>
-        </div>
-      </div> -->
-      
-      <!-- CPAT -->
+      <!-- Biological properties -->
       <div class="row my-4">
         <h4 class="mb-3">Isoform biological properties</h3>
-        <p> The section below contains links to files with predictes isoform-level biological properties. </p>
+          <p> The section below contains links to files with predictes isoform-level biological properties. </p>
+        <!-- CPAT -->
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
             <div class="text-center">
@@ -275,6 +240,7 @@
             </p>
           </div>
         </div>
+        <!-- Pfam -->
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
             <div class="text-center">
@@ -322,6 +288,7 @@
             </p>
           </div>
         </div>
+        <!-- Repeats -->
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
             <div class="text-center">
@@ -369,6 +336,7 @@
             </p>
           </div>
         </div>
+        <!-- Conservation -->
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
             <div class="text-center">
@@ -395,6 +363,171 @@
                     <li><b>transcript_id:</b> Transcript ID</li>
                     <li><b>mean_score:</b> Average conservation score across the isoform exons (PhastCons100way)</li>
                   </ul>
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Expression and splicing -->
+      <div class="row my-4">
+        <h4 class="mb-3">Expression and splicing</h3>
+          <p> The section below contains links to files containing estimated expression and splicing of isoforms throughout human preimplantation development. </p>
+        <!-- Expression -->
+        <div class="col-xl-3 col-md-6">
+          <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/expression-heatmap.png" alt="" style="height: 200px; max-width: 100% !important;">
+            </div>
+            <b>Expression counts</b>
+            <p>
+              Raw and normalized gene and isoform expression levels.
+              <br>
+              <div class="row text-center">
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="#">
+                    <i class="fa-solid fa-download"></i> Download
+                  </a>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Expression files" data-bs-content="
+                  The downloadable ZIP file contains the following files:
+                  <ul>
+                    <li><b>human_embryo_gene_counts.tsv</b>: raw gene-level counts</li>
+                    <li><b>human_embryo_isoform_counts.tsv</b>: raw isoform-level counts</li>
+                    <li><b>human_embryo_gene_tpm.tsv</b>: normalized gene-level counts (transcripts per million, TPM)</li>
+                    <li><b>human_embryo_isoform_tpm.tsv</b>: normalized isoform-level counts (transcripts per million, TPM)</li>
+                  </ul>
+                  Each file is in the <b>TSV format</b>, with gene or transcript IDs as rows, samples as columns, and estimated expression (either raw or normalized, as described above) as values. Expression was quantified using STAR (v2.7.5b) and RSEM (v1.3.3).
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+        <!-- DEseq -->
+        <div class="col-xl-3 col-md-6">
+          <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/volcano-plot.png" alt="" style="height: 200px; max-width: 100% !important;">
+            </div>
+            <b>Differential expression</b>
+            <p>
+              Differential expression results throughout development.
+              <br>
+              <div class="row text-center">
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="#">
+                    <i class="fa-solid fa-download"></i> Download
+                  </a>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Differential expression files" data-bs-content="
+                  The downloadable ZIP file contains the following files:
+                  <ul>
+                    <li><b>human_embryo_differential_gene_expression.xlsx</b>: gene-level differential expression</li>
+                    <li><b>human_embryo_differential_isoform_expression.xlsx</b>: isoform-level differential expression</li>
+                  </ul>
+                  Each file is in the <b>XLSX format</b>, with each sheet containing a pairwise comparison of consecutive preimplantation developmental stages.
+                  <br><br>
+                  Each sheet contains the following columns (default output from DESeq2, v1.3.0):
+                  <ul>
+                    <li><b>gene_id</b>: gene ID (known genes begin with 'ENSG', novel genes begin with 'TALONG')</li>
+                    <li><b>transcript_id</b> (only for isoform-level results file): transcript ID (known transcripts begin with 'ENST', novel genes begin with 'TALONT')</li>
+                    <li><b>baseMean</b>: average normalized expression across samples</li>
+                    <li><b>log2FoldChange</b>: log2-transformed fold change in normalized expression across stages. Positive values indicate higher expression in the later developmental stage, while negative values indicate lower expression in the later developmental stage.</li>
+                    <li><b>pvalue</b>: unadjusted differential expression p-value from DESeq2.</li>
+                    <li><b>padj</b>: adjusted p-value using the Benjamini-Hochberg method.</li>
+                  </ul>
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+        <!-- PSI -->
+        <div class="col-xl-3 col-md-6">
+          <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/psi-heatmap.png" alt="" style="height: 200px; max-width: 100% !important;">
+            </div>
+            <b>Splicing inclusion levels</b>
+            <p>
+              Relative isoform inclusion levels across samples.
+              <br>
+              <div class="row text-center">
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="#">
+                    <i class="fa-solid fa-download"></i> Download
+                  </a>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Splicing inclusion files" data-bs-content="
+                  The downloadable ZIP file contains the following files, each containing percent spliced in (PSI) levels across embryo samples:
+                  <ul>
+                    <li><b>human_embryo_isoform_psi.tsv</b>: isoform-level</li>
+                    <li><b>human_embryo_SE_psi.tsv</b>: skipped exon (SE)</li>
+                    <li><b>human_embryo_RI_psi.tsv</b>: retained intron (RI)</li>
+                    <li><b>human_embryo_A5_psi.tsv</b>: alternative 5' splice site (A5)</li>
+                    <li><b>human_embryo_A3_psi.tsv</b>: alternative 3' splice site (A3)</li>
+                    <li><b>human_embryo_MX_psi.tsv</b>: mutually exclusive exons (MX)</li>
+                    <li><b>human_embryo_AF_psi.tsv</b>: alternative first exon (AF)</li>
+                    <li><b>human_embryo_AL_psi.tsv</b>: alternative last exon (AL)</li>
+                  </ul>
+                  Each file is in the <b>TSV format</b>, containing transcript or splicing event IDs on rows, samples on columns, and PSI as values. Results were generated using <b>SUPPA2</b> (v2.3). For more information on the data and format, please see the <a href='https://github.com/comprna/SUPPA' target='_blank'>SUPPA manual</a>.
+                  " data-bs-html="true">
+                  <!-- <li><b>ID:</b></li> -->
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+        <!-- dPSI -->
+        <div class="col-xl-3 col-md-6">
+          <div class="border rounded px-3 py-2 mx-1 my-2 my-xl-0 height-100">
+            <div class="text-center">
+              <img src="web-resource/img/alternative-splicing.png" alt="" style="height: 200px; max-width: 100% !important;">
+            </div>
+            <b>Alternative splicing</b>
+            <p>
+              Alternative splicing events throughout development.
+              <br>
+              <div class="row text-center">
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="#">
+                    <i class="fa-solid fa-download"></i> Download
+                  </a>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Alternative splicing files" data-bs-content="
+                  The downloadable ZIP file contains the following files, each containing alternative splicing results across developmental stage transitions:
+                  <ul>
+                    <li><b>human_embryo_isoform_differential_splicing_results.xlsx</b>: isoform-level</li>
+                    <li><b>human_embryo_SE_differential_splicing_results.xlsx</b>: skipped exon (SE)</li>
+                    <li><b>human_embryo_RI_differential_splicing_results.xlsx</b>: retained intron (RI)</li>
+                    <li><b>human_embryo_A5_differential_splicing_results.xlsx</b>: alternative 5' splice site (A5)</li>
+                    <li><b>human_embryo_A3_differential_splicing_results.xlsx</b>: alternative 3' splice site (A3)</li>
+                    <li><b>human_embryo_MX_differential_splicing_results.xlsx</b>: mutually exclusive exons (MX)</li>
+                    <li><b>human_embryo_AF_differential_splicing_results.xlsx</b>: alternative first exon (AF)</li>
+                    <li><b>human_embryo_AL_differential_splicing_results.xlsx</b>: alternative last exon (AL)</li>
+                  </ul>
+                  Each file is in the <b>TSV format</b>, containing the following columns:
+                  <ul>
+                    <li><b>event_id</b>: ID of the splicing event (see <a href='https://github.com/comprna/SUPPA' target='_blank'>SUPPA manual</a> for details)</li>
+                    <li><b>dPSI</b>: differential percent spliced in (PSI) across compared developmental stages</li>
+                    <li><b>pvalue</b>: alternative splicing p-value computed by SUPPA2</li>
+                  </ul>
+                  Results were generated using <b>SUPPA2</b> (v2.3). For more information on the data and format, please see the <a href='https://github.com/comprna/SUPPA' target='_blank'>SUPPA manual</a>.
                   " data-bs-html="true">
                     <i class="fa-regular fa-circle-question"></i> Help
                   </button>
@@ -458,12 +591,6 @@
   <script type="text/javascript">
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-    // $(function () {
-    //   $('').popoverbs-({})
-    // })
-  </script>bs-
-
-
+  </script>
 </body>
-bs-
-</html>data-bs-bs-
+</html>
