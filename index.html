@@ -9,6 +9,9 @@
   <link rel="icon" type="image/x-icon" href="web-resource/favicon.ico">
   <link href="web-resource/bootstrap-5.2.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="web-resource/style.css" rel="stylesheet">
+  <link href="web-resource/fontawesome-free-6.2.0-web/css/fontawesome.css" rel="stylesheet">
+  <link href="web-resource/fontawesome-free-6.2.0-web/css/brands.css" rel="stylesheet">
+  <link href="web-resource/fontawesome-free-6.2.0-web/css/solid.css" rel="stylesheet">
 </head>
 
 <body>
@@ -76,48 +79,60 @@
         <div class="col-xl-4">
           <div class="border rounded px-3 py-2 mx-1 height-100">
             <div class="text-center">
-              <img src="web-resource/img/exon-intron.png" alt="" style="height: 180px;" class="my-2">
+              <img src="web-resource/img/exon-intron.png" alt="" style="height: 180px;" class="my-2 max-width: 100% !important;">
             </div>
             <b>Isoform coordinates (GTF)</b>
             <p>
               Coordinates of known and novel embryo isoforms on Enseml GRCh38 human genome build.
               <br>
               <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.gtf">
-                    Download
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.gtf">
+                    <i class="fa-solid fa-download"></i> Download
                   </a>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Isoform coordinates file (GTF)" data-bs-content="
+                  The isoform coordinates file contains information on the <b>genomic coordinates of known and novel isoforms</b> identified in this study.
+                  <br><br>
+                  This file can be used in place of the standard reference GTF file for <b>transcriptome annotation</b>, including analyses such as gene and isoform-level expression quantification, alternative splicing, and annotation of peaks from ChIP-Seq or ATAC-Seq data.
+                  <br><br>
+                  The file is in the <b><a href='https://useast.ensembl.org/info/website/upload/gff.html' target='_blank'>GTF format</a></b>, and known isoforms are based on the Ensembl GRCh38 v102 human transcriptome build.
+                  " data-bs-html="true">
+                  <i class="fa-regular fa-circle-question"></i> Help
+                </button>
               </div>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-xl-4">
-          <div class="border rounded px-3 py-2 mx-1 height-100">
-            <div class="text-center">
-              <img src="web-resource/img/nucleotide-sequence.png" alt="" style="width: 100%;" class="py-5">
             </div>
-            <b>Isoform sequences (FASTA)</b>
-            <p>
-              Nucleotide sequences of known and novel embryo isoforms (exons only).
-              <br>
-              <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.fasta">
-                    Download
-                  </a>
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-xl-4">
+        <div class="border rounded px-3 py-2 mx-1 height-100">
+          <div class="text-center">
+            <img src="web-resource/img/nucleotide-sequence.png" alt="" style="width: 100%; max-width: 500px !important;" class="py-5">
+          </div>
+          <b>Isoform sequences (FASTA)</b>
+          <p>
+            Nucleotide sequences of known and novel embryo isoforms (exons only).
+            <br>
+            <div class="row text-center">
+              <div class="col-6">
+                <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/reference-transcriptome/Homo_sapiens.GRCh38.102_talon-SJ_filtered_subset.fasta">
+                  <i class="fa-solid fa-download"></i> Download
+                </a>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Isoform sequences file (FASTA)" data-bs-content="
+                The isoform sequences file contains information on the <b>nucleotide sequences</b> of the spliced isoforms in the isoform-resolved transcriptome described in this study.
+                <br><br>
+                This file can be used in place of the standard reference cDNA file for <b>transcript expression quantification</b> using tools such as Kallisto and Salmon. It can also be used to predict <b>isoform biological properties</b> based on their nucleotide sequence, such as protein-coding potential and repetitive element integration.
+                <br><br>
+                The file is in the <b><a href='https://www.ncbi.nlm.nih.gov/genbank/fastaformat/' target='_blank'>FASTA format</a></b>, and known isoforms are based on the Ensembl GRCh38 v102 human transcriptome build.
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
               </div>
             </p>
           </div>
@@ -126,23 +141,50 @@
         <div class="col-xl-4">
           <div class="border rounded px-3 py-2 mx-1 height-100">
             <div class="text-center">
-              <img src="web-resource/img/isoform-structural-classes.png" alt="" class="py-3" style="height: 200px;">
+              <img src="web-resource/img/isoform-structural-classes.png" alt="" class="py-3" style="height: 200px; max-width: 100% !important;">
             </div>
             <b>Isoform structural classes</b>
             <p>
               Isoform classification compared to known transcripts (using TALON/SQANTI3).
               <br>
               <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/structural-classification/Homo_sapiens.GRCh38.102_talon-SJ_filtered-transcript_classification_subset.tsv">
-                    Download
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/structural-classification/Homo_sapiens.GRCh38.102_talon-SJ_filtered-transcript_classification_subset.tsv">
+                    <i class="fa-solid fa-download"></i> Download
                   </a>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Isoform structural class file (TSV)" data-bs-content="
+                  The isoform structural class file contains information on the <b>classification of isoforms</b> in the isoform-resolved transcriptome when compared to known isoforms in the Ensembl GRCh38 v102 human transcriptome build.
+                  <br><br>
+                  The structural classes of isoforms were predicted using <b><a href='https://github.com/ConesaLab/SQANTI3' target='_blank'>SQANTI3</a></b> (v4.2) and <b><a href='https://github.com/mortazavilab/TALON' target='_blank'>TALON</a></b> (v5.0), and consist of the following:
+                  <ul>
+                    <li><b>Known</b>: full splice site match to a known transcript</li>
+                    <li><b>Novel in catalog (NIC)</b>: novel transcript of a known gene, containing a novel combination of known splice sites</li>
+                    <li><b>Novel not in catalog (NNC)</b>: novel transcript of a known gene, containing at least one novel splice site</li>
+                    <li><b>Antisense</b>: novel transcript of a novel gene, overlapping a known gene but in antisense direction</li>
+                    <li><b>Intergenic</b>: novel transcript of a novel gene, which does not overlap any known gene</li>
+                  </ul>
+                  For more information on the approach used to generate the transcriptome, please refer to the <b>Methods</b> section of the manuscript. 
+                  <br><br>
+                  The file is in the TSV format, and contains the following columns:
+                  <ul>
+                    <li><b>gene_id</b>: Ensembl gene ID (GRCh38 v102 human transcriptome build)</li>
+                    <li><b>transcript_id</b>: IDs of known transcripts (beginning with 'ENST') and novel transcripts ('TALONT')</li>
+                    <li><b>transcript_length</b>: Length of the transcript primary sequence in nucleotide </li>
+                    <li><b>nr_exons</b>: Number of exons in the spliced transcript</li>
+                    <li><b>gene_novelty</b>: Gene classification according to TALON</li>
+                    <li><b>transcript_novelty</b>: Transcript classification according to TALON</li>
+                    <li><b>fl_counts</b>: Full-length PacBio read count </li>
+                    <li><b>structural_category</b>: Transcript classification according to SQANTI3</li>
+                    <li><b>subcategory</b>: Transcript classification subcategory according to SQANTI3</li>
+                    <li><b>gene_novelty_merged</b>: Final gene classification based on integration of TALON and SQANTI3</li>
+                    <li><b>Transcript_novelty</b>: Final transcript classification based on integration of TALON and SQANTI3</li>
+                  </ul>
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
               </div>
             </p>
           </div>
@@ -193,23 +235,42 @@
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 height-100">
             <div class="text-center">
-              <img src="web-resource/img/mrna-translation.png" alt="" style="height: 200px;">
+              <img src="web-resource/img/mrna-translation.png" alt="" style="height: 200px; max-width: 100% !important;">
             </div>
             <b>Protein-coding potential</b>
             <p>
               Predicted protein-coding potential and ORFs of each isoform.
               <br>
               <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-coding-potential/Homo_sapiens.GRCh38.102_talon-SJ_filtered-cpat.ORF_prob.best_subset.tsv">
-                    Download
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-coding-potential/Homo_sapiens.GRCh38.102_talon-SJ_filtered-cpat.ORF_prob.best_subset.tsv">
+                    <i class="fa-solid fa-download"></i> Download
                   </a>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Protein-coding potential file" data-bs-content="
+                  The protein-coding potential file contains information on the <b>predicted protein-coding probabilities</b> and <b>best predicted open reading frames</b> (ORFs) of isoforms in the transcriptome.
+                  <br><br>
+                  These values were predicted using <b><a href='https://cpat.readthedocs.io/en/latest/' target='_blank'>CPAT</a></b> (v3.0.2) based on the isoform nucleotide sequences.
+                  <br><br>
+                  The file is in the TSV format, and contains the following columns:
+                  <ul>
+                    <li><b>seq_ID:</b>Transcript ID</li>
+                    <li><b>ID:</b>ID of the best predicted ORF for each isoform</li>
+                    <li><b>mRNA:</b>Length of the isoform in nucleotides</li>
+                    <li><b>ORF_strand:</b>Strand of the best predicted ORF with respect to the isoform</li>
+                    <li><b>ORF_frame:</b>Reading frame of the best ORF with respect to the isoform nucleotide sequence</li>
+                    <li><b>ORF_start:</b>Start nucleotide of the best ORF with respect to the isoform nucleotide sequence</li>
+                    <li><b>ORF_end:</b>End nucleotide of the best ORF with respect to the isoform nucleotide sequence</li>
+                    <li><b>ORF:</b>ORF length in nucleotides</li>
+                    <li><b>Fickett:</b> <a href='https://academic.oup.com/nar/article/10/17/5303/2385104' target='_blank'>Fickett score</a> of the best predicted ORF (see <a href='https://cpat.readthedocs.io/en/latest/#introduction' target='_blank'>CPAT manual</a> for more details.)</li>
+                    <li><b>Hexamer:</b> <a href='https://academic.oup.com/nar/article/20/24/6441/1114215' target='_blank'>Hexamer usage bias</a> of the best predicted ORF (see <a href='https://cpat.readthedocs.io/en/latest/#introduction' target='_blank'>CPAT manual</a> for more details.)</li>
+                    <li><b>Coding_prob:</b> predicted protein-coding probability of the ORF. According to the <a href='https://cpat.readthedocs.io/en/latest/#how-to-choose-cutoff' target='_blank'>CPAT manual</a>, the recommended cutoff for protein-coding isoforms in human is ≥0.364</li>
+                  </ul>                  
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
               </div>
             </p>
           </div>
@@ -217,23 +278,47 @@
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 height-100">
             <div class="text-center">
-              <img src="web-resource/img/protein-domain.png" alt="" style="height: 200px;">
+              <img src="web-resource/img/protein-domain.png" alt="" style="height: 200px; max-width: 100% !important;">
             </div>
             <b>Protein domain content</b>
             <p>
               Predicted protein domains for each predicted protein-coding isoform.
               <br>
               <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-domain-prediction/human-translated_pfam_subset.tsv">
-                    Download
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/protein-domain-prediction/human-translated_pfam_subset.tsv">
+                    <i class="fa-solid fa-download"></i> Download
                   </a>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Protein domain content file" data-bs-content="
+                  The protein domain content file <b>predicted known protein domains</b> in the translated amino acid sequences of the best ORF of each predicted protein-coding isoform in the isoform-resolved transcriptome.
+                  <br><br>
+                  These values were predicted using <b>PfamScan</b> (v1.6) and <b>HMMer</b> (v3.3) leveraging the best ORFs predicted using CPAT, as described earlier.
+                  <br><br>
+                  The file is in the TSV format.
+                  " data-bs-html="true">
+                  <!-- , and contains the following columns: -->
+                  <!-- <ul>
+                    <li><b>seq_id:</b>Transcript ID</li>
+                    <li><b>alignment_start:</b></li>
+                    <li><b>alignment_end:</b></li>
+                    <li><b>envelope_start:</b></li>
+                    <li><b>envelope_end:</b></li>
+                    <li><b>hmm_acc:</b></li>
+                    <li><b>hmm_name:</b></li>
+                    <li><b>type:</b></li>
+                    <li><b>hmm_start:</b></li>
+                    <li><b>hmm_end:</b></li>
+                    <li><b>hmm_length:</b></li>
+                    <li><b>bit_score:</b></li>
+                    <li><b>E_value:</b></li>
+                    <li><b>significance:</b></li>
+                    <li><b>clan:</b></li>
+                  </ul> -->
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
               </div>
             </p>
           </div>
@@ -241,23 +326,29 @@
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 height-100">
             <div class="text-center">
-              <img src="web-resource/img/repetitive-dna.png" alt="" style="height: 200px;">
+              <img src="web-resource/img/repetitive-dna.png" alt="" style="height: 200px; max-width: 100% !important;">
             </div>
             <b>Repeat element content</b>
             <p>
               Predicted repetitive element content (e.g. ERVs) of each isoform.
               <br>
               <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/repeat-content-prediction/Homo_sapiens.GRCh38.102_talon_repeatmasker_subset.tsv">
-                    Download
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/repeat-content-prediction/Homo_sapiens.GRCh38.102_talon_repeatmasker_subset.tsv">
+                    <i class="fa-solid fa-download"></i> Download
                   </a>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Repetitive element integration file" data-bs-content="
+                  The repetitive element content file contains information on the <b>integration of repetitive elements</b> in the nucleotide sequences of isoforms in the isoform-resolved transcriptome.
+                  <br><br>
+                  These values were predicted using <b>RepeatMasker</b> (v4.11) using the isoform nucleotide sequences as an input.
+                  <br><br>
+                  The file is in the TSV format.
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
               </div>
             </p>
           </div>
@@ -265,23 +356,29 @@
         <div class="col-xl-3 col-md-6">
           <div class="border rounded px-3 py-2 mx-1 height-100">
             <div class="text-center">
-              <img src="web-resource/img/phylogenetic-tree.png" alt="" style="height: 200px;">
+              <img src="web-resource/img/phylogenetic-tree.png" alt="" style="height: 200px; max-width: 100% !important;">
             </div>
             <b>Evolutionary conservation</b>
             <p>
               Predicted evolutionary conservation scores for each isoform.
               <br>
               <div class="row text-center">
-                <div class="col-12">
-                  <a class="btn btn-light" href="https://human-embryo-transcriptome.s3.amazonaws.com/evolutionary-conservation/hg38.phastCons100way-exon-average_scores_subset.tsv">
-                    Download
+                <div class="col-6">
+                  <a class="btn btn-light w-100" href="https://human-embryo-transcriptome.s3.amazonaws.com/evolutionary-conservation/hg38.phastCons100way-exon-average_scores_subset.tsv">
+                    <i class="fa-solid fa-download"></i> Download
                   </a>
                 </div>
-                <!-- <div class="col-6">
-                  <a class="btn btn-light w-100">
-                    Format
-                  </a>
-                </div> -->
+                <div class="col-6">
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Evolutionary conservation file" data-bs-content="
+                  The evolutionary conservation file contains information on the <b>average predicted evolutionary conservation scores</b> of isoforms in the isoform-resolved transcriptome.
+                  <br><br>
+                  These values were calculated using the <b><a href='https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/' target='_blank'>phastCons100way</a></b> score file, based on the multiple sequence alignment of the human genome to 99 vertebrates spanning primates, mammals, birds, reptiles and fish.
+                  <br><br>
+                  The file is in the TSV format.
+                  " data-bs-html="true">
+                    <i class="fa-regular fa-circle-question"></i> Help
+                  </button>
+                </div>
               </div>
             </p>
           </div>
@@ -335,9 +432,18 @@
 
 
   <script src="web-resource/bootstrap-5.2.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script type="text/javascript" src="https://livejs.com/live.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    // $(function () {
+    //   $('').popoverbs-({})
+    // })
+  </script>bs-
 
 
 </body>
-
-</html>
+bs-
+</html>data-bs-bs-
