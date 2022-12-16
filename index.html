@@ -19,7 +19,7 @@
   <main>
 
     <!-- Header -->
-    <div class="container">
+    <div id="title" class="container">
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
           <span class="fs-4">Isoform-resolved human embryo transcriptome</span>
@@ -42,6 +42,20 @@
             This website is intended as a resource accompanying the publication "<b>Isoform-resolved transcriptome reveals thousands of novel genes in human preimplantation embryos</b>" (Torre et al.), which is currently under revision.
           </p>          
           <p>
+            The resource contains the following sections:
+            <ul>
+              <li>
+                <b><a href="#data-files">Data files</a></b>, where users can download all processed data files containing coordinates, structure and predicted biological properties for each isoform in the embryo transcriptome.
+              </li>
+              <li>
+                <b><a href="#genome-browser">Genome browser</a></b>, which contains an interactive UCSC genome browser session containing the full isoform-resolved dataset, alongside processed human embryo ATAC-Seq (<a href="https://www.nature.com/articles/s41467-018-08244-0" target="_blank">Liu et al.</a>). and CUT&RUN (<a href="https://www.science.org/doi/10.1126/science.aaw5118" target="_blank">Xia et al.</a>) data, and multiple publicly available tracks (e.g. evolutionary conservation, repetitive element location, ENCODE, GTEx, etc.)
+              </li>
+              <li>
+                <b><a href="#isoform-explorer">Isoform explorer</a></b>, which allows users to interactively explore isoform-level predictions of biological function for each gene, and view both isoform and gene expression across the samples in our dataset.
+              </li>
+            </ul>
+          </p>          
+          <!-- <p>
             Below, users will be able to access both raw and processed long- and short-read RNA-Seq data generated for this study, the code employed to generate these results, alongisde detailed descriptions of the contents and format of each available data file.
           </p>
           <p>
@@ -49,7 +63,7 @@
           </p>
           <p>
             In the meantime, reviewers may access the data using the provided credentials at the following link: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190548", target="_blank">GSE190548</a>.
-          </p>
+          </p> -->
         </div>
       </div>
       
@@ -70,10 +84,16 @@
       
       
       <!-- Data files -->
-      <h3 class="border-bottom pb-3 my-4">Data files</h3>
+      <h3 id="data-files" class="border-bottom pb-3 my-4">Data files <a href="#title" class="text-black"><i class="fa-solid fa-angle-up"></i></a></h3>
       
       <!-- GTF -->
       <div class="row my-4">
+        <p>
+          Below, users can access all processed long- and short-read RNA-Seq data generated for this study, including isoform-level predictions of biological properties.
+          <br>
+          <b>Note</b>: the full dataset will be made publicly available upon publication of the manuscript, in the meantime, all files are available but limited to the first 100 rows.
+          <!-- Reviewers may access the data using the provided credentials at the following link: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190548", target="_blank">GSE190548</a>. -->
+        </p>
         <h4 class="mb-3">Isoform-resolved transcriptome</h3>
           
         <div class="col-xl-4">
@@ -92,7 +112,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Isoform coordinates file (GTF)" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Isoform coordinates file (GTF)" data-bs-content="
                   The isoform coordinates file contains information on the <b>genomic coordinates of known and novel isoforms</b> identified in this study.
                   <br><br>
                   This file can be used in place of the standard reference GTF file for <b>transcriptome annotation</b>, including analyses such as gene and isoform-level expression quantification, alternative splicing, and annotation of peaks from ChIP-Seq or ATAC-Seq data.
@@ -123,7 +143,7 @@
                 </a>
               </div>
               <div class="col-6">
-                <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Isoform sequences file (FASTA)" data-bs-content="
+                <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Isoform sequences file (FASTA)" data-bs-content="
                 The isoform sequences file contains information on the <b>nucleotide sequences</b> of the spliced isoforms in the isoform-resolved transcriptome described in this study.
                 <br><br>
                 This file can be used in place of the standard reference cDNA file for <b>transcript expression quantification</b> using tools such as Kallisto and Salmon. It can also be used to predict <b>isoform biological properties</b> based on their nucleotide sequence, such as protein-coding potential and repetitive element integration.
@@ -154,7 +174,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Isoform structural class file (TSV)" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Isoform structural class file (TSV)" data-bs-content="
                   The isoform structural class file contains information on the <b>classification of isoforms</b> in the isoform-resolved transcriptome when compared to known isoforms in the Ensembl GRCh38 v102 human transcriptome build.
                   <br><br>
                   The structural classes of isoforms were predicted using <b><a href='https://github.com/ConesaLab/SQANTI3' target='_blank'>SQANTI3</a></b> (v4.2) and <b><a href='https://github.com/mortazavilab/TALON' target='_blank'>TALON</a></b> (v5.0), and consist of the following:
@@ -213,7 +233,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Protein-coding potential file" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Protein-coding potential file" data-bs-content="
                   The protein-coding potential file contains information on the <b>predicted protein-coding probabilities</b> and <b>best predicted open reading frames</b> (ORFs) of isoforms in the transcriptome.
                   <br><br>
                   These values were predicted using <b><a href='https://cpat.readthedocs.io/en/latest/' target='_blank'>CPAT</a></b> (v3.0.2) based on the isoform nucleotide sequences.
@@ -257,7 +277,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Protein domain content file" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Protein domain content file" data-bs-content="
                   The protein domain content file <b>predicted known protein domains</b> in the translated amino acid sequences of the best ORF of each predicted protein-coding isoform in the isoform-resolved transcriptome.
                   <br><br>
                   These values were predicted using <b>PfamScan</b> (v1.6) and <b>HMMer</b> (v3.3) leveraging the best ORFs predicted using CPAT, as described earlier.
@@ -305,7 +325,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Repetitive element integration file" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Repetitive element integration file" data-bs-content="
                   The repetitive element content file contains information on the <b>integration of repetitive elements</b> in the nucleotide sequences of isoforms in the isoform-resolved transcriptome.
                   <br><br>
                   These values were predicted using <b>RepeatMasker</b> (v4.11) using the isoform nucleotide sequences as an input.
@@ -353,7 +373,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Evolutionary conservation file" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Evolutionary conservation file" data-bs-content="
                   The evolutionary conservation file contains information on the <b>average predicted evolutionary conservation scores</b> of isoforms in the isoform-resolved transcriptome.
                   <br><br>
                   These values were calculated using the <b><a href='https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/' target='_blank'>phastCons100way</a></b> score file, based on the multiple sequence alignment of the human genome to 99 vertebrates spanning primates, mammals, birds, reptiles and fish.
@@ -394,7 +414,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Expression files" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Expression files" data-bs-content="
                   The downloadable ZIP file contains the following files:
                   <ul>
                     <li><b>human_embryo_gene_counts.tsv</b>: raw gene-level counts</li>
@@ -402,7 +422,9 @@
                     <li><b>human_embryo_gene_tpm.tsv</b>: normalized gene-level counts (transcripts per million, TPM)</li>
                     <li><b>human_embryo_transcript_tpm.tsv</b>: normalized isoform-level counts (transcripts per million, TPM)</li>
                   </ul>
-                  Each file is in the <b>TSV format</b>, with gene or transcript IDs as rows, samples as columns, and estimated expression (either raw or normalized, as described above) as values. Expression was quantified using STAR (v2.7.5b) and RSEM (v1.3.3).
+                  Each file is in the <b>TSV format</b>, with gene or transcript IDs as rows, samples as columns, and estimated expression (either raw or normalized, as described above) as values.
+                  <br><br>
+                  Expression was quantified using STAR (v2.7.5b) and RSEM (v1.3.3).
                   " data-bs-html="true">
                     <i class="fa-regular fa-circle-question"></i> Help
                   </button>
@@ -428,7 +450,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Differential expression files" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Differential expression files" data-bs-content="
                   The downloadable ZIP file contains the following files:
                   <ul>
                     <li><b>human_embryo_differential_gene_expression.xlsx</b>: gene-level differential expression</li>
@@ -470,7 +492,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Splicing inclusion files" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Splicing inclusion files" data-bs-content="
                   The downloadable ZIP file contains the following files, each containing percent spliced in (PSI) levels across embryo samples:
                   <ul>
                     <li><b>human_embryo_transcript_psi.tsv</b>: isoform-level</li>
@@ -482,7 +504,9 @@
                     <li><b>human_embryo_AF_psi.tsv</b>: alternative first exon (AF)</li>
                     <li><b>human_embryo_AL_psi.tsv</b>: alternative last exon (AL)</li>
                   </ul>
-                  Each file is in the <b>TSV format</b>, containing transcript or splicing event IDs on rows, samples on columns, and PSI as values. Results were generated using <b>SUPPA2</b> (v2.3). For more information on the data and format, please see the <a href='https://github.com/comprna/SUPPA' target='_blank'>SUPPA manual</a>.
+                  Each file is in the <b>TSV format</b>, containing transcript or splicing event IDs on rows, samples on columns, and PSI as values.
+                  <br><br>
+                  Results were generated using <b>SUPPA2</b> (v2.3). For more information on the data and format, please see the <a href='https://github.com/comprna/SUPPA' target='_blank'>SUPPA manual</a>.
                   " data-bs-html="true">
                   <!-- <li><b>ID:</b></li> -->
                     <i class="fa-regular fa-circle-question"></i> Help
@@ -509,7 +533,7 @@
                   </a>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger=”focus” data-bs-title="Alternative splicing files" data-bs-content="
+                  <button type="button" class="btn btn-light w-100" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Alternative splicing files" data-bs-content="
                   The downloadable ZIP file contains the following files, each containing alternative splicing results across developmental stage transitions:
                   <ul>
                     <li><b>human_embryo_alternative_isoform_inclusion.xlsx</b>: isoform-level results</li>
@@ -535,6 +559,30 @@
           </div>
         </div>
       </div>
+
+      <!-- Genome browser -->
+      <h3 id="genome-browser" class="border-bottom pb-3 my-4">Genome browser <a href="#title" class="text-black"><i class="fa-solid fa-angle-up"></i></a></h3>
+      The interface below allows users to explore the full isoform-resolved dataset, alongside processed human embryo ATAC-Seq (<a href="https://www.nature.com/articles/s41467-018-08244-0" target="_blank">Liu et al.</a>). and CUT&RUN (<a href="https://www.science.org/doi/10.1126/science.aaw5118" target="_blank">Xia et al.</a>) data, and multiple publicly available tracks (e.g. evolutionary conservation, repetitive element location, ENCODE, GTEx, etc.)
+      <br>
+      <br>
+      The session is also available at the following location: <a href="https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome" target="_blank">https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome</a>
+      <div class="row my-4">
+        <iframe id="genome-browser-iframe" src="https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome?pix=1000" height="2500" width="100%"></iframe>
+      </div>
+
+      <!-- Isoform explorer -->
+      <h3 id="isoform-explorer" class="border-bottom pb-3 my-4">Isoform explorer <a href="#title" class="text-black"><i class="fa-solid fa-angle-up"></i></a></h3>
+      The interface below allows users to interactively explore isoform-level predictions of biological function for each gene, and view both isoform and gene expression across the samples in our dataset.
+      <br>
+      <br>
+      The isoform explorer is also available at the following location: <a href="https://denistorre.shinyapps.io/human-embryo-transcriptome/" target="_blank">https://denistorre.shinyapps.io/human-embryo-transcriptome/</a>
+      <br>
+      <br>
+      <div class="row my-4">
+        <iframe id="isoform-explorer-iframe" class="border border-dark rounded" src="https://denistorre.shinyapps.io/human-embryo-transcriptome/" height="1000" width="100%"></iframe>
+      </div>
+      
+
 
       <!-- Pipeline -->
       <!-- <div class="row my-4">
@@ -583,12 +631,18 @@
 
 
   <script src="web-resource/bootstrap-5.2.1/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="https://livejs.com/live.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script type="text/javascript">
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    // Popover dismiss
+    $('body').on('click', function (e) {
+      if ($(e.target).parents('.popover').length==0) {
+      (($('[data-bs-toggle="popover"]').popover('hide').data('bs.popover') || {}).inState || {}).click = false;
+    }
+  });
   </script>
 </body>
 </html>
