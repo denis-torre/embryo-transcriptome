@@ -1,5 +1,6 @@
 body {
   /* background-color: #FAFBFE; */
+  font-family: 'Poppins-Light', 'Poppins-Medium', 'Poppins-Regular', sans-serif;
 }
 
 main .container {
@@ -9,6 +10,71 @@ main .container {
 .popover {
   max-width: 450px !important;
 }
+
+nav {
+  background-color: white;
+}
+
+.med {
+  font-family: 'Poppins-Medium', sans-serif;
+}
+
+b {
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+a {
+  color: black !important;
+}
+
+li {
+  padding-bottom: 13px;
+}
+
+h3 {
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+h4 {
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+.btn-light {
+  font-size: 15px;
+}
+
+#acknowledgements a {
+  font-size: 15px;
+}
+
+.fa-angle-up {
+  padding-left: 6px;
+}
+
+@font-face {
+  font-family: 'Poppins-Light';  /* Give your font a name */
+  src: url('poppins/Poppins-Light.ttf') format('truetype');  /* Specify the path to your TTF file */
+  /* You can also include additional font formats for better cross-browser compatibility */
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';  /* Give your font a name */
+  src: url('poppins/Poppins-Medium.ttf') format('truetype');  /* Specify the path to your TTF file */
+  /* You can also include additional font formats for better cross-browser compatibility */
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';  /* Give your font a name */
+  src: url('poppins/Poppins-Regular.ttf') format('truetype');  /* Specify the path to your TTF file */
+  /* You can also include additional font formats for better cross-browser compatibility */
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';  /* Give your font a name */
+  src: url('poppins/Poppins-Bold.ttf') format('truetype');  /* Specify the path to your TTF file */
+  /* You can also include additional font formats for better cross-browser compatibility */
+}
+
 
 /* @media (min-width: 992px) {
   .rounded-lg-3 { border-radius: .3rem; }
