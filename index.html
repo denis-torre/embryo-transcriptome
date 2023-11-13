@@ -33,8 +33,8 @@
   <main>
     <nav class="navbar navbar-expand-xl mb-3 fixed-top">
       <div class="container">
-        <a href="#title" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-          <span class="medium" style="font-size: 1.7rem !important;"><b>Isoform-resolved human embryo transcriptome</b></span>
+        <a href="#title" class="d-flex align-items-center my-1 me-md-auto text-dark text-decoration-none">
+          <span class="medium" id="website-title"><b>Isoform-resolved human embryo transcriptome</b></span>
         </a>
     
         <!-- Toggler button for small screens -->
@@ -90,7 +90,7 @@
         <!-- <h3>Overview</h3> -->
         <!-- <p>This website is intended as an accompanying resource to the publication </p> -->
         <div class="col-xl-6 mb-4 mb-xl-0 text-center">
-          <img src="web-resource/img/study-design.png" alt="Overview of study design" style="width: 100%; max-width: 750px !important;">
+          <img src="web-resource/img/study-design.png" alt="Overview of study design" style="width: 100%;">
         </div>
         <div class="col-xl-6 pt-1">
           <p>
@@ -112,29 +112,8 @@
               </li>
             </ul>
           </p>          
-          <!-- <p>
-            Below, users will be able to access both raw and processed long- and short-read RNA-Seq data generated for this study, the code employed to generate these results, alongisde detailed descriptions of the contents and format of each available data file.
-          </p>
-          <p>
-            <b>Please note that all raw and processed data will be made publicly available upon publication of the manuscript.</b> In the meantime, all files are available but limited to the first 100 rows.
-          </p>
-          <p>
-            In the meantime, reviewers may access the data using the provided credentials at the following link: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190548", target="_blank">GSE190548</a>.
-          </p> -->
         </div>
       </div>
-      
-      
-      <!-- Study design -->
-      <!-- <div class="row my-4">
-        <h3>Study design</h3>
-        <div class="col-7">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div> -->
-
       
       <!-- Data files -->
       <!-- <h3 class="border-bottom pb-3 my-4">Genome browser</h3> -->
@@ -145,7 +124,7 @@
       The interface below allows users to explore the full isoform-resolved dataset, including RNA-expression across 1C to blastocyst stages; processed human embryo ATAC-Seq (<a href="https://www.nature.com/articles/s41467-018-08244-0" target="_blank">Liu et al.</a>). and CUT&RUN (<a href="https://www.science.org/doi/10.1126/science.aaw5118" target="_blank">Xia et al.</a>) data; and multiple publicly available tracks (e.g. evolutionary conservation, repetitive element location, ENCODE, etc.)
       <br>
       <br>
-      The session is also available at the following location: <a href="https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome" target="_blank">https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome</a>
+      The session is also available on the <a href="https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome" target="_blank">UCSC Genome Browser</a>.
       <div class="row my-4">
         <iframe id="genome-browser-iframe" src="https://genome.ucsc.edu/s/denis.torre/Embryonic%20transcriptome?pix=1000" height="2500" width="100%"></iframe>
       </div>
@@ -155,7 +134,7 @@
       The interface below allows users to interactively explore isoform-level predictions of biological function for each gene, and view both isoform and gene expression across the samples in our dataset.
       <br>
       <br>
-      The isoform explorer is also available at the following location: <a href="https://rstudio-connect.hpc.mssm.edu/human-embryo-transcriptome/" target="_blank">https://rstudio-connect.hpc.mssm.edu/human-embryo-transcriptome/</a>
+      The isoform explorer is also available at: <a href="https://rstudio-connect.hpc.mssm.edu/human-embryo-transcriptome/" target="_blank">https://rstudio-connect.hpc.mssm.edu/human-embryo-transcriptome/</a>
       <br>
       <br>
       <div class="row my-4">
@@ -658,28 +637,28 @@
       <!-- Acknowledgements -->
       <div class="row my-4" id="acknowledgements">
         <h4 class="border-bottom pb-3 my-4">Acknowledgements</h3>
-        <div class="col-6">
+        <div class="col-lg-6">
           <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4">
               <a href="" target="_blank">
-                <img src="web-resource/img/ismms.jpg" alt="" style="width: 100%;">
+                <img src="web-resource/img/ismms.jpg" alt="" style="width: 100%; max-width: 300px;" class="mb-3 mb-md-0">
               </a>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8 pb-5">
               <a href="https://icahn.mssm.edu/research/advanced-genomics-technology" target="_blank">Sebra lab<br>Center for Advanced Genomics Technologies (CAGT)</a>
               <br>
               <a href="https://icahn.mssm.edu/research/genomics" target="_blank">Department of Genetics and Genomic Sciences</a>
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <div class="row">
-            <div class="col-2">
+            <div class="col-lg-2">
               <a href="" target="_blank">
-                <img src="web-resource/img/tasmc.png" alt="" style="max-width: 100%; max-height: 100px;">
+                <img src="web-resource/img/tasmc.png" alt="" style="max-width: 100%; max-height: 100px;" class="mb-3 mb-md-0">
               </a>
             </div>
-            <div class="col-10">
+            <div class="col-lg-10">
               <a href="https://icahn.mssm.edu/research/advanced-genomics-technology" target="_blank">Wolfe PGD-Stem Cell Research Lab</a>
               <br>
               <a href="https://www.tasmc.org.il/sites/en/Lis/Fertility-Research/Pages/Lab-IVF.aspx" target="_blank">Tel Aviv Sourasky Medical Center IVF Laboratory</a>

@@ -31,6 +31,16 @@ li {
   padding-bottom: 13px;
 }
 
+@media (max-width: 768px) {
+  #website-title {
+    font-size: 1.3rem !important; /* Adjust the font size for large screens */
+  }
+}
+
+#website-title {
+  font-size: 1.7rem; /* Adjust the font size for large screens */
+}
+
 h3 {
   font-family: 'Poppins-Regular', sans-serif;
 }
