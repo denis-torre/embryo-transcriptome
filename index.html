@@ -33,7 +33,7 @@
   <main>
     <nav class="navbar navbar-expand-xl mb-3 fixed-top">
       <div class="container">
-        <a href="#title" class="d-flex align-items-center my-1 me-md-auto text-dark text-decoration-none">
+        <a href="#title" class="d-flex align-items-center my-1 me-md-auto text-dark text-decoration-none scroll-to-top-btn">
           <span class="medium" id="website-title"><b>Isoform-resolved human embryo transcriptome</b></span>
         </a>
     
@@ -120,7 +120,7 @@
       
       
       <!-- Genome browser -->
-      <h3 id="genome-browser" class="border-bottom pb-3 my-4">Genome browser <a href="#title" class="text-black"><i class="fa-solid fa-angle-up"></i></a></h3>
+      <h3 id="genome-browser" class="border-bottom pb-3 my-4">Genome browser <a href="#asd" class="text-black"><i class="fa-solid fa-angle-up scroll-to-top-btn"></i></a></h3>
       The interface below allows users to explore the full isoform-resolved dataset, including RNA-expression across 1C to blastocyst stages; processed human embryo ATAC-Seq (<a href="https://www.nature.com/articles/s41467-018-08244-0" target="_blank">Liu et al.</a>). and CUT&RUN (<a href="https://www.science.org/doi/10.1126/science.aaw5118" target="_blank">Xia et al.</a>) data; and multiple publicly available tracks (e.g. evolutionary conservation, repetitive element location, ENCODE, etc.)
       <br>
       <br>
@@ -130,7 +130,7 @@
       </div>
 
       <!-- Isoform explorer -->
-      <h3 id="isoform-explorer" class="border-bottom pb-3 my-4">Isoform explorer <a href="#title" class="text-black"><i class="fa-solid fa-angle-up"></i></a></h3>
+      <h3 id="isoform-explorer" class="border-bottom pb-3 my-4">Isoform explorer <a href="#title" class="text-black"><i class="fa-solid fa-angle-up scroll-to-top-btn"></i></a></h3>
       The interface below allows users to interactively explore isoform-level predictions of biological function for each gene, and view both isoform and gene expression across the samples in our dataset.
       <br>
       <br>
@@ -143,7 +143,7 @@
       
 
       <!-- Data files -->
-      <h3 id="data-files" class="border-bottom pt-2 pb-3 my-4">Data files <a href="#title" class="text-black"><i class="fa-solid fa-angle-up"></i></a></h3>
+      <h3 id="data-files" class="border-bottom pt-2 pb-3 my-4">Data files <a href="#title" class="text-black"><i class="fa-solid fa-angle-up scroll-to-top-btn"></i></a></h3>
       
       <!-- GTF -->
       <div class="row my-4">
@@ -686,7 +686,7 @@
   <script src="web-resource/bootstrap-5.2.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js" integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="https://livejs.com/live.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
@@ -696,6 +696,13 @@
       (($('[data-bs-toggle="popover"]').popover('hide').data('bs.popover') || {}).inState || {}).click = false;
     }
   });
-  </script>
+    $('.scroll-to-top-btn').on('click', function(event) {
+      event.preventDefault();
+
+      // Use jQuery's animate function to smoothly scroll to the top of the page
+      $('html, body').animate({
+        scrollTop: 0
+      }, 100); // You can adjust the animation speed (in milliseconds) as needed
+    });  </script>
 </body>
 </html>
